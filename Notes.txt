@@ -1,12 +1,58 @@
-npm - package manager
-package.json (configuration for npm)
-2 types of dependancies -
-    1. dev dependancies
-    2. normal dependancies
+IGNITING THE APP
 
-parcel - bundler (npm install -D parcel)  - (-D means dev dependancy used in development stage only)
-transitive dependancies - one package have other packages and those have other like dependancy tree (so when we install one it will install all)
-npx parcel index.html (npx is same as npm npm used to install and all and if we want to execute something then we need to use npx parcel {something})
-its better to use react as npm package than a cdn link (npm install react)
+        npm - package manager
+        package.json (configuration for npm)
+        2 types of dependancies -
+            1. dev dependancies
+            2. normal dependancies
 
-when we build our project remember to remove main from package.json (npx parcel build index.html)
+        parcel - bundler (npm install -D parcel)  - (-D means dev dependancy used in development stage only)
+        transitive dependancies - one package have other packages and those have other like dependancy tree (so when we install one it will install all)
+        npx parcel index.html (npx is same as npm npm used to install and all and if we want to execute something then we need to use npx parcel {something})
+        its better to use react as npm package than a cdn link (npm install react)
+
+        when we build our project remember to remove main from package.json (npx parcel build index.html)
+
+LAYING THE FOUNDATION
+
+        npx parcel index.html (we no longer need this command as we are going to change the commands into npm 
+            1. change package.json script into 
+                "scripts": {
+                    "start": "parcel index.html",
+                    "build": "parcel build index.html",
+                    "test": "jest"
+                },
+
+                we added start and build here so that we can access it through npm commands
+                npx parcel index.html - npm run start/ npm start
+                npx parcel build index.html - npm run build
+            )
+
+
+        as the create element is not developer friendly facebook dev created JSX as we can combine javascript and html together 
+        
+        const heading = React.createElement(
+            "h1",
+            {"id": "heading"},
+            "Namaste React"
+        );
+
+        const jsxHeading = <h1>Namaste React using JSX </h1>
+
+        babel inside parcel is transpiling the jsx to react
+        {
+            react.createElement => reactElement- JS object => HTMLElement
+            JSX => react.createElement => reactElement - JS object => HTMLElement
+        }
+
+
+        JSX - is a camal case (className,tabIndex)
+
+        React components
+            1. class based component - old
+            2. Functional component - new (normal javascript function which returns jsx)
+
+        component composition - component inside component
+
+        jsx will sanitize the data which is given so the malicious attacks will be stopped by jsx 
+        JSX makes our webapp readable
