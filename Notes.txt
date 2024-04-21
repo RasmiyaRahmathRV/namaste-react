@@ -1,0 +1,12 @@
+npm - package manager
+package.json (configuration for npm)
+2 types of dependancies -
+    1. dev dependancies
+    2. normal dependancies
+
+parcel - bundler (npm install -D parcel)  - (-D means dev dependancy used in development stage only)
+transitive dependancies - one package have other packages and those have other like dependancy tree (so when we install one it will install all)
+npx parcel index.html (npx is same as npm npm used to install and all and if we want to execute something then we need to use npx parcel {something})
+its better to use react as npm package than a cdn link (npm install react)
+
+when we build our project remember to remove main from package.json (npx parcel build index.html)
