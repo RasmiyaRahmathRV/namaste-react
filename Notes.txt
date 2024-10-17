@@ -56,3 +56,24 @@ LAYING THE FOUNDATION
 
         jsx will sanitize the data which is given so the malicious attacks will be stopped by jsx 
         JSX makes our webapp readable
+
+        config driven ui - ui is driven by a config (based on the data from backend)
+
+
+exploring the world
+    usestate - used to create local variables in our function
+                so always called it inside our component function
+                keep it always at the top
+    useEffect - 2 arguments (return function, dependancy array)
+                if no dependancy array => useEffect will call after every render
+                if dependancy array is empty => useEffect will call only on initial render (just once)
+                if dependancy array has a value => useEffect will call everytime the value updates
+    shimmer ui
+
+    react faster bcz of reconciliation algorithm - wich check 2 vertual dom and update the part which needs updation
+    whenever the state variable updated react component is also updated
+
+
+
+react router
+    - npm i react-router-dom
